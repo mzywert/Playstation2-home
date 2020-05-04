@@ -1,0 +1,123 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	font-family: Arial, sans-serif;
+}
+div {
+	overflow: hidden;
+}
+#kontener {
+	width: 950px;
+	margin: 0 auto;
+	background: linear-gradient(to bottom, #404392 0%, #0faae0 100%);
+}
+#gora {
+	width: 100%;
+	height: 180px;
+    -webkit-text-stroke: #000 2px;
+    font-size: 33px;
+}
+#gora p:first-child {
+	float: left;
+	padding: 35px;
+	color: #fff;
+	font-weight: bold;
+}
+#gora p:nth-child(2) {
+	float: right;
+	padding: 35px;
+	color: #fff;
+	font-weight: bold;
+}
+#gora #header_text {
+    clear: both;
+    color: #ffff45;
+}
+#lewy {
+	width: 25%;
+    height: 403px;
+	float: left;
+}
+#lewy img {
+	margin: 3% 0%;
+}
+#srodek  {
+	width: 75%;
+	height: 403px;
+	float: right;
+	color: #fff;
+	position: relative;
+}
+#srodek #center {
+	font-size: 35px;
+	color: #2cf8ff;
+    -webkit-text-stroke: #000 2px;
+	font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#srodek img {
+	width: 100%;
+}
+#srodek h1 {
+	margin-top: 7px;
+	margin-bottom: 5px;
+}
+#srodek p {
+	margin: 2% 4%;
+	text-align: justify;
+}
+#stopka {
+	width: 100%;
+	height: 100%;
+    margin: 0 auto;
+	padding: 15px 0px;
+	font-size: 35px;
+	color: #fff;
+    -webkit-text-stroke: #000 2px;
+	font-weight: bold;
+}
+.zdjecia {
+	height: 150px;
+	width: 200px;
+	border: 2px solid #fff;
+}
+.zdjecia2 {
+	width: 200px;
+	border: 2px solid #fff;
+}
+.zdjecia3 {
+	height: 285px;
+	width: 370px;
+	box-shadow: 0px 0px 6px #000;
+}
+.zdjecia4 {
+	height: 50%;
+	width: 40%;
+	box-shadow: 0px 0px 6px #000;
+}
+button {
+	padding: 1.5% 1.5%;
+	transition: background 2s;
+	border: none;
+	border-radius: 5px;
+}
+button a{
+	text-decoration: none;
+	color: #000;
+	
+}
+button:hover {
+	background: rgba(255, 255, 255, 0.5);
+}
+table {
+	margin-left: 7.5%;
+	margin-top: 2.1%;
+}
+
+a {
+	
+}

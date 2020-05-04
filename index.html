@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<title>Strona główna</title>
+<script type="text/javascript">
+	function wyswietlDane() {
+	  var data = new Date();
+	  var godziny = data.getHours();
+	  var minuty = data.getMinutes();
+	  var sekundy = data.getSeconds();
+	  var czas = godziny;
+	  czas += ((minuty < 10) ? ":0" : ":") + minuty;
+	  czas += ((sekundy < 10) ? ":0" : ":") + sekundy;
+	  var miesiac = data.getMonth() + 1;
+	  if (miesiac < 9){
+		miesiac = "0" + miesiac;
+	  }
+	  var dzien = data.getDate();
+	  if (dzien < 9){
+		dzien = "0" + dzien;
+	  }
+	  var rok = data.getYear();
+	  if (rok < 1000){
+		rok = 2000 + rok - 100;
+	  }
+	  var dzisiaj = miesiac + "/" + dzien + "/" + rok;
+
+	  var tekst = dzisiaj;
+	  document.getElementById("dataLayer").innerHTML = tekst;
+	  document.getElementById("dataLayer2").innerHTML = czas;
+	  timerID = setTimeout("wyswietlDane()",1000);
+	}   
+	var nr=0;
+    function zmiana() {
+        var obrazy = new Array('img/1.jpg', 'img/2.jpg', 'img/3.jpg', 'img/4.jpg', 'img/5.jpg');
+        nr++;
+        if (nr == obrazy.length) {
+            nr = 0;
+        }
+        document.getElementById('baner').src = obrazy[nr];
+        setTimeout("zmiana()",2000);
+    }
+</script>
+</head>
+<body onload="wyswietlDane(); zmiana();">
+<div id="kontener">
+<div id="gora">
+		<p><span id="dataLayer"></span></p>
+		<p><i class="far fa-clock" style="box-shadow: 0 0 0px 2px #000;border-radius: 41px;font-size: 30px;"></i>&nbsp;&nbsp;&nbsp;<span id="dataLayer2"></span></p>
+		<marquee behavior="alternate" direction="up" width="100%">
+			<marquee direction="right" behavior="alternate" width="100%"><h3 id="header_text">Witam na naszej stronie</h3></marquee>
+		</marquee>
+</div>
+<div id="lewy">
+	<img id="zdj1" onClick="window.open('https://men.gov.pl/')" onMouseOut="document.getElementById('zdj1').src='img/x.png'" onMouseOver="document.getElementById('zdj1').src='img/c.png'" src="img/x.png"/>
+	<img id="zdj2" onClick="window.open('https://helion.pl/')"  onMouseOut="document.getElementById('zdj2').src='img/t.png'" onMouseOver="document.getElementById('zdj2').src='img/c.png'" src="img/t.png"/>
+	<img id="zdj3" onClick="window.open('https://cke.gov.pl/')"  onMouseOut="document.getElementById('zdj3').src='img/s.png'" onMouseOver="document.getElementById('zdj3').src='img/c.png'" src="img/s.png"/>
+</div>
+<div id="srodek">
+	<img src="img/1.jpg" id="baner"/>
+	<div id="center">Przykładowy tekst</div>
+</div>
+<div id="stopka">
+	<marquee behavior="scroll" direction="left">Your scrolling text goes here</marquee>
+</div>
+</div>
+
+</body>
+</html>
